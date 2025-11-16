@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <link rel="icon" type="image/png" href="image.png" />
+    <title>📋 Daily ClassBoard</title>
+  <meta name="google" content="notranslate">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="event.css" />
+</head>
+
+<body class="light">
+  <!-- 🔝 HEADER -->
+  <header>
+    <div class="header-left">
+    
+
+      <!-- 🔍 Search -->
+      <div class="search-area">
+        <input id="searchBox" class="search" placeholder="🔍 সার্চ করুন..." />
+        <img src="submit.png" id="searchSubmit" alt="Search" class="submit-icon" />
+      </div>
+
+      <h1>📋 DailyClassBoard</h1>
+    </div>
+
+    <!-- ⚙️ Icons -->
+    <div class="icons">
+      <button class="btn-view" id="viewBtn">👀 Student View</button>
+      <img src="settings.png" id="settingsBtn" alt="Settings" title="Settings">
+      <img src="add.png" id="addBtn" alt="Add" title="Add New" style="display:none;">
+    </div>
+  </header>
+
+  <!-- 🏠 MAIN CONTENT -->
+  <main class="container">
+    <div id="noticeList" class="notice-list"></div>
+  </main>
+
+  <!-- ⚙️ SETTINGS PANEL -->
+  <div id="settingsOverlay" class="settings-overlay"></div>
+  <div id="settingsPanel" class="settings-panel">
+    <div class="settings-content">
+      <h3>⚙️ Settings</h3>
+      <button id="darkModeBtn">🌙 Dark Mode</button>
+      <button id="lightModeBtn">☀️ Light Mode</button>
+      <button id="langBtn">🌐 Language</button>
+      <button id="adminLoginBtn">🔐 Admin Login</button>
+      <button id="studentLoginBtn">👨‍🎓 Student Login</button>
+      <button id="logoutBtn">🚪 Logout</button>
+      <button id="closeSettings">✖️ Close</button>
+    </div>
+  </div>
+
+  <!-- 🔐 LOGIN MODAL -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h3>🔑 Login</h3>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button id="loginSubmit">Login</button>
+      <p id="loginMsg"></p>
+    </div>
+  </div>
+
+  <!-- 🗑️ DELETE CONFIRM MODAL -->
+  <div id="deleteModal" class="modal">
+    <div class="modal-content">
+      <h3>⚠️ Delete Confirmation</h3>
+      <p>Enter Admin Password to Confirm Delete</p>
+      <input type="password" id="deletePass" placeholder="Admin Password" />
+      <div class="delete-actions">
+        <button id="confirmDelete">✅ Confirm</button>
+        <button id="cancelDelete">❌ Cancel</button>
+      </div>
+      <p id="deleteMsg"></p>
+    </div>
+  </div>
+
+  <!-- ➕ ADD TYPE MODAL -->
+  <div id="addTypeModal" class="modal">
+    <div class="modal-content">
+      <h3>➕ Add Type</h3>
+      <button id="addNoticeBtn">📢 Notice</button>
+      <button id="addVoteBtn">🗳️ Vote</button>
+    </div>
+  </div>
+
+  <!-- 📝 ADD FORM MODAL -->
+  <div id="formModal" class="modal">
+    <div class="modal-content" id="formContainer"></div>
+  </div>
+
+  <footer>
+    <p>© 2025 DailyClassBoard | Developed by MARUF 💻</p>
+  </footer>
+
+  <script src="event.js"></script>
+</body>
+</html>
